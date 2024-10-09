@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простой сайт</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fHRleHR1cmV8ZW58MHx8fHwxNjg4NTkzMzE1&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center fixed; /* Текстурный фон */
+            background-size: cover; /* Параметры для обтяжки фона */
+            color: white;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7); /* Прозрачный серый фон */
+            color: #fff;
+            text-align: center;
+            padding: 3rem 0; /* Увеличенный отступ */
+        }
+
+        /* Стиль для навигации */
+        nav {
+            background-color: rgba(0, 0, 0, 0.7); /* Прозрачный фон для навигации */
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center; /* Центрирование элементов */
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 30px; /* Увеличенные отступы между пунктами */
+            font-size: 20px; /* Увеличенный размер шрифта */
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav a:after {
+            content: '';
+            display: block;
+            height: 2px;
+            background-color: #ffcc00; /* Цвет линии */
+            margin: 5px auto; /* Отступы для линий */
+            width: 100%; /* Ширина линии */
+            opacity: 0; /* Изначально невидимы */
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffcc00; /* Цвет при наведении */
+        }
+
+        nav a:hover:after {
+            opacity: 1; /* Линия становится видимой при наведении */
+        }
+
+        section {
+            padding: 80px 20px; /* Увеличенные отступы */
+            text-align: center;
+            margin-bottom: 80px; /* Увеличенный отступ между секциями */
+            background-color: rgba(0, 0, 0, 0.6); /* Прозрачный черный фон для секций */
+            border-radius: 8px; /* Закругленные углы */
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.7); /* Прозрачный серый фон */
+            color: #fff;
+            text-align: center;
+            padding: 30px 0; /* Увеличенный отступ */
+            position: relative; /* Изменено с fixed на relative для нормального размещения */
+            width: 100%;
+        }
+
+        /* Добавил более мягкий цвет для параграфов */
+        section p {
+            color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Добро пожаловать на мой сайт</h1>
+</header>
+
+<!-- Меню навигации для перемещения по странице -->
+<nav>
+    <a href="#aboutme">О себе</a>
+    <a href="#portfolio">Примеры работ</a>
+    <a href="#reviews">Отзывы</a>
+    <a href="#contact">Контакты</a>
+</nav>
+
+<!-- Раздел о себе -->
+<section id="aboutme">
+    <h2>О себе</h2>
+    <p>Я занимаюсь созданием сайтов, и мне нравится помогать людям и компаниям превращать их идеи в реальность в цифровом пространстве. Я разрабатываю не просто веб-страницы, а полноценные онлайн-решения, которые учитывают потребности пользователей и цели бизнеса. Мой подход включает в себя тщательное планирование, дизайн и программирование, чтобы гарантировать, что каждый сайт не только выглядит привлекательно, но и работает эффективно. Если у тебя есть идея для сайта или проект, который требует онлайн-присутствия, я с радостью помогу тебе его реализовать и предложу индивидуальные решения, чтобы он выделялся среди конкурентов.</p>
+</section>
+
+<!-- Новый раздел "Примеры работ" -->
+<section id="portfolio">
+    <h2>Примеры работ</h2>
+    <p>Здесь можно показать несколько проектов, которые я уже завершил:</p>
+    <ul>
+        <li>Проект 1: Сайт для магазина</li>
+        <li>Проект 2: Персональный блог</li>
+        <li>Проект 3: Портфолио для фотографа</li>
+    </ul>
+</section>
+
+<!-- Новый раздел "Отзывы" -->
+<section id="reviews">
+    <h2>Отзывы</h2>
+    <p>"Отличная работа! Я очень доволен результатом!" - Клиент 1</p>
+    <p>"Профессионал своего дела, рекомендую!" - Клиент 2</p>
+    <p>"Работа была выполнена в срок и с высоким качеством." - Клиент 3</p>
+</section>
+
+<!-- Секция с контактами внизу страницы -->
+<section id="contact">
+    <h2>Контакты</h2>
+    <p>Телефон: 881783573</p>
+    <p>Электронная почта: <a href="mailto:artann2008@gmail.com" style="color: #ffcc00;">artann2008@gmail.com</a></p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Простой сайт. Все права защищены.</p>
+</footer>
+
+</body>
+</html>
